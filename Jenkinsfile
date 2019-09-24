@@ -1,10 +1,13 @@
 @Library('mpl') _
 
 MPLPipeline {
-    stage("ending"){
-        steps{
-            script{
-                echo "Done!"
+    
+    stages{
+        stage("ending"){
+            steps{
+                script{
+                    echo "Done!"
+                }
             }
         }
     }
