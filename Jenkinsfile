@@ -1,3 +1,5 @@
 @Library('mpl') _
 
-MPLPipeline {}
+MPLPipeline {
+    echo "Done!"
+}
