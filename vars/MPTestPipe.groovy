@@ -28,13 +28,12 @@
  * @author Sergei Parshev <sparshev@griddynamics.com>
  */
 def call(body={}) {
-  def MPL = MPLPipelineConfig(body, [
+  def MPL = MPLPipelineConfig(body + {"git.url" : "git@github.com:Wizzzo/smarthome-listener.git"}, [
     agent_label: '',
     modules: [
       Checkout: [:]
     ]
-  ],
-  ["git.url" : "git@github.com:Wizzzo/smarthome-listener.git"])
+  ])
 
   pipeline {
     agent {
