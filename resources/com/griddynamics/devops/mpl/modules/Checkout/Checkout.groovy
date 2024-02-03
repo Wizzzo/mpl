@@ -20,7 +20,7 @@ checkout(
           ,[$class: 'WipeWorkspace']
       ],
       userRemoteConfigs: [
-          [name: 'origin',  refspec: "${}", credentialsId: 'Gtihub-ssh-key', url: "${gitUrl}"]
+          [name: 'origin',  refspec: gitRef, credentialsId: 'Gtihub-ssh-key', url: gitUrl]
       ]
   ]
 )
