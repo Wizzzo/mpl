@@ -46,7 +46,7 @@ def call(body={}) {
       stage( 'Checkout' ) {
         when { expression { MPLModuleEnabled() } }
         steps {
-            var config = ["git.url":"git@github.com:Wizzzo/smarthome-listener.git"]
+            config = ["git.url":"git@github.com:Wizzzo/smarthome-listener.git"]
           MPLModule(cfg = config )
         }
       }
