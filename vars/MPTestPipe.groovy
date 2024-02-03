@@ -47,7 +47,7 @@ def call(body={}) {
         when { expression { MPLModuleEnabled() } }
         steps {
             script{
-                def config = ["git.url":"git@github.com:Wizzzo/smarthome-listener.git"]
+                Map config = ["git.url":"git@github.com:Wizzzo/smarthome-listener.git"]
                 MPLModule(cfg = config )
             }
         }

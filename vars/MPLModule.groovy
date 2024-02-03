@@ -42,7 +42,7 @@ import org.jenkinsci.plugins.workflow.steps.FlowInterruptedException
  *
  * @return  MPLConfig object was available in the module as `OUT`
  */
-def call(String name = env.STAGE_NAME, def cfg = null) {
+def call(String name = env.STAGE_NAME, cfg = null) {
   if( cfg == null )
     cfg = MPLManager.instance.moduleConfig(name)
   else if( cfg instanceof MPLConfig )
