@@ -48,7 +48,8 @@ def call(body={}) {
         steps {
             // script{
                 // MPLModule("Checkout",["git" :["url":"git@github.com:Wizzzo/smarthome-listener.git"]] )
-                myfunc( cfg: [git : "git bash"] )
+                conf = [git : "git bash"]
+                myfunc( cfg: conf )
             // }
         }
       }
