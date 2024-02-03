@@ -34,7 +34,7 @@ def call(body={}) {
       Checkout: [:]
     ]
   ],
-  {"git.url" : "git@github.com:Wizzzo/smarthome-listener.git"})
+  ["git.url" : "git@github.com:Wizzzo/smarthome-listener.git"])
 
   pipeline {
     agent {
