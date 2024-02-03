@@ -48,7 +48,7 @@ def call(body={}) {
         steps {
             script{
                 LinkedHashMap config = ["git.url":"git@github.com:Wizzzo/smarthome-listener.git"]
-                MPLModule(cfg = config )
+                MPLModule(name ="Checkout",cfg = config )
             }
         }
       }
