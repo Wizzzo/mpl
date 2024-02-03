@@ -43,10 +43,16 @@ def call(body={}) {
       skipDefaultCheckout(true)
     }
     stages {
-      stage( 'Checkout' ) {
+    //   stage( 'Checkout' ) {
+    //     when { expression { MPLModuleEnabled() } }
+    //     steps {
+    //         MPLModule(name ="Checkout",cfg = ["git" :["url":"git@github.com:Wizzzo/smarthome-listener.git"]] )
+    //     }
+    //   }
+      stage( 'Multibracg Checkout' ) {
         when { expression { MPLModuleEnabled() } }
         steps {
-            MPLModule(name ="Checkout",cfg = ["git" :["url":"git@github.com:Wizzzo/smarthome-listener.git"]] )
+            MPLModule()
         }
       }
     }
