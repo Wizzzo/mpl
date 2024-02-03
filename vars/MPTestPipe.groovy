@@ -47,7 +47,7 @@ def call(body={}) {
         when { expression { MPLModuleEnabled() } }
         steps {
             // MPLModule cfg: ["git" :["url":"git@github.com:Wizzzo/smarthome-listener.git"]]
-            myfunc()
+            myfunc(cfg: ["git" : "git bash"])
         }
       }
     //   stage( 'Multibrach Checkout' ) {
