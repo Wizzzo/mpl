@@ -28,7 +28,7 @@
  * @author Sergei Parshev <sparshev@griddynamics.com>
  */
 def call(body={}) {
-  def MPL = MPLPipelineConfig(body + {"git.url" : "git@github.com:Wizzzo/smarthome-listener.git"}, [
+  def MPL = MPLPipelineConfig(body, [
     agent_label: '',
     modules: [
       Checkout: [:]
@@ -46,7 +46,7 @@ def call(body={}) {
       stage( 'Checkout' ) {
         when { expression { MPLModuleEnabled() } }
         steps {
-          MPLModule()
+          MPLModule(cfg = ["git.url" : "git@github.com:Wizzzo/smarthome-listener.git"])
         }
       }
     }
