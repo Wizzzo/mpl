@@ -1,4 +1,4 @@
-def funcu (def name = "my name", def cfg = [:]){
+def call (def name = "my name", def cfg = [:]){
     echo "${name}"
     echo "${cfg.toString()}"
 }
