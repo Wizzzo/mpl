@@ -47,7 +47,7 @@ def call(body={}) {
         when { expression { MPLModuleEnabled() } }
         steps {
             script{
-    //         MPLModule("Checkout",["git" :["url":"git@github.com:Wizzzo/smarthome-listener.git"]] )
+                // MPLModule("Checkout",["git" :["url":"git@github.com:Wizzzo/smarthome-listener.git"]] )
                 myfunc.funcu( cfg: [git : "git bash"] )
             }
         }
