@@ -46,10 +46,7 @@ def call(body={}) {
       stage( 'Checkout' ) {
         when { expression { MPLModuleEnabled() } }
         steps {
-            script{
-                LinkedHashMap config = ["git.url":"git@github.com:Wizzzo/smarthome-listener.git"]
-                MPLModule(name ="Checkout",cfg = config )
-            }
+            MPLModule(name ="Checkout",cfg = ["git" :{"url":"git@github.com:Wizzzo/smarthome-listener.git"}] )
         }
       }
     }
